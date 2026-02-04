@@ -1,0 +1,316 @@
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #070707;
+        padding: 0;
+        margin: 0;
+    }
+
+/* BACKGROUND VIDEO */
+    .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+        filter: brightness(0.6); 
+    }
+
+/* HEADER BAR */
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #06060600;
+        color: white;
+        padding: 0 40px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+
+    .header-bar .logo img {
+        height: 50px;
+        width: auto;
+    }
+
+    .site-title {
+        flex-grow: 1;
+        text-align: left;
+        margin: 0;
+        margin-left: 20px;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+        scroll-behavior: smooth;
+    }
+
+    .nav-links a:hover {
+        color: #ff4dd5;
+        cursor: pointer;   
+    }
+
+/*SHELF*/
+    .shelf-container {
+        position: relative;
+        width: 100%;     
+        margin: 0 auto;  
+    }
+
+    .centerShelf {
+        width: 100%;     
+        height: auto;   
+        display: block;
+        margin: 0 auto; 
+    }
+
+    .book {
+        position:absolute;
+        transition: transform 0.2s ease; 
+        cursor: pointer;    
+    }
+
+    .book:hover {   
+        transform: scale(1.5);
+        z-index: 10;
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.918));
+    }
+
+/*BOOK LABELS*/
+    .book img {
+        width: 100%; 
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    /* Hidden label */
+    .book-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.71);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .book:hover {   
+        transform: scale(1.5);
+        z-index: 10;
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.918));
+    }
+
+    .book:hover .book-label {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-5px);
+    }
+
+
+/*SIGNS*/
+    .sign {
+        transition: transform 0.2s ease; 
+    }
+    .sign-mangaSign {
+        position: absolute;
+        top: 12.5%;      
+        left: 44.5%;
+        width: 12%; 
+        height: auto;
+    }
+    .sign-manhwaSign {
+        position: absolute;
+        top: 29%;      
+        left: 44.5%;
+        width: 12%; 
+        height: auto;
+        z-index: +1;
+    }
+    .sign-manhuaSign {
+        position: absolute;
+        top: 44%;      
+        left: 44.5%;
+        width: 12%; 
+        height: auto;
+        z-index: +1;
+    }
+
+/* MANGA */
+        .book-mangaBook1 {
+            position: absolute;
+            top: 17.7%;     
+            left: 20.5%; 
+            width: 3%; 
+            height: auto;
+        }
+        .book-mangaBook2 {
+            position: absolute;
+            top: 17.7%;     
+            left: 23.5%; 
+            width: 2.8%; 
+            height: auto;
+        }
+        .book-mangaBook3 {
+            position: absolute;
+            top: 17.6%;     
+            left: 26.3%; 
+            width: 8%; 
+            height: auto;
+        }
+        .book-mangaBook4 {
+            position: absolute;
+            top: 18.1%;     
+            left: 72.9%; 
+            width: 2.8%; 
+            height: auto;
+        }
+        .book-mangaBook5 {
+            position: absolute;
+            top: 18.5%;     
+            left: 75.7%; 
+            width: 4%; 
+            height: auto;
+        }
+
+/* MANGA */
+        .book-manhwaBook1 {
+            position: absolute;
+            top: 42.3%;     
+            left: 21.5%; 
+            width: 14.5%; 
+            height: auto;
+        }
+        .book-manhwaBook2 {
+            position: absolute;
+            top: 34.4%;     
+            left: 50%; 
+            width: 3.7%; 
+            height: auto;
+        }
+        .book-manhwaBook3 {
+            position: absolute;
+            top: 33.7%;     
+            left: 53.7%; 
+            width: 2.8%; 
+            height: auto;
+        }
+        .book-manhwaBook4 {
+            position: absolute;
+            top: 34.3%;     
+            left: 70.2%; 
+            width: 5.6%; 
+            height: auto;
+        }
+        .book-manhwaBook5 {
+            position: absolute;
+            top: 33.6%;     
+            left: 76%; 
+            width: 3.6%; 
+            height: auto;
+        }
+
+/* MANGA */
+        .book-manhuaBook1 {
+            position: absolute;
+            top: 49.1%;     
+            left: 39%; 
+            width: 3.2%; 
+            height: auto;
+        }
+        .book-manhuaBook2 {
+            position: absolute;
+            top: 49.5%;     
+            left: 42.2%; 
+            width: 2.5%; 
+            height: auto;
+        }
+        .book-manhuaBook3 {
+            position: absolute;
+            top: 50.4%;     
+            left: 44.7%; 
+            width: 2.1%; 
+            height: auto;
+        }
+
+/* FOOTER */
+.footer {
+    background-color: #07070700;
+    color: white;
+    padding: 20px 13%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-top {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-socials img {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(0.7); 
+    filter: drop-shadow(0 0 15px #ff4dd5);
+
+}
+
+.footer hr {
+    border: none;
+    border-top: 1px solid #070707;
+    margin: 15px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.footer-links a {
+    color: #bbb;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff4dd5;
+    cursor: pointer;   
+}
